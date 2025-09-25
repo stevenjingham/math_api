@@ -1,7 +1,7 @@
 package com.example.math_api;
 
 public class MathDomain {
-    public boolean isPrime(int number) {
+    public boolean checkPrime(int number) {
 
         if (number <= 1) return false;
         for (int i = 2; i <= Math.sqrt(number); i++){

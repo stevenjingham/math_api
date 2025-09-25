@@ -14,7 +14,7 @@ public class MathController {
 
     @GetMapping("/primeNumber/{number}")
     public String primeNumber(@PathVariable int number){
-        return mathService.isPrime(number);
+        return mathService.checkPrime(number);
     }
 
 }

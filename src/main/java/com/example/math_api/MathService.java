@@ -10,8 +10,8 @@ public class MathService {
     }
 
 
-    public String isPrime(int number) {
+    public String checkPrime(int number) {
         if (number < 1) throw new InvalidNumberInput(number);
-        return number + " is a prime: " + mathDomain.isPrime(number);
+        return number + " is a prime: " + mathDomain.checkPrime(number);
     }
 }

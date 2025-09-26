@@ -1,4 +1,4 @@
-package com.example.math_api.Exception;
+package com.example.math_api.exception;
 
 public class InvalidNumberInput extends RuntimeException{
     public InvalidNumberInput(Object number) {

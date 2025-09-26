@@ -1,0 +1,104 @@
+<!-- HTML and CSS mostly auto-generated. Not focussing on that in this project -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number API</title>
+    <script src="app.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px 0 0 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 0 8px 8px 0;
+            transition: background 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result-box {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 12px;
+            min-height: 24px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .actions button {
+            flex: 1;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🔢 Number API</h1>
+
+    <div class="input-group">
+        <input type="number" id="numberInput" placeholder="Enter a number" />
+
+    </div>
+
+    <div class="actions">
+        <button onclick="checkPrime()">Check if prime</button>
+        <button onclick="getPrimesBelowInputNumber()">Get Primes Below</button>
+    </div>
+
+    <div id="resultCheckPrime" class="result-box"></div>
+    <div id="resultGetPrimesBelow" class="result-box"></div>
+</div>
+</body>
+</html>

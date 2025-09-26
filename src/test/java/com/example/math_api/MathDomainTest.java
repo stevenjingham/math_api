@@ -2,8 +2,11 @@ package com.example.math_api;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MathDomainTest {
     private MathDomain mathDomain;
@@ -34,6 +37,12 @@ public class MathDomainTest {
         for (int i: primes) {
             assertFalse(mathDomain.checkPrime(i));
         }
+    }
+
+    @Test
+    public void getPrimesBelowInputNumber_returnsCorrectValues(){
+        ArrayList<Integer> expected = new ArrayList<>(List.of(2, 3, 5, 7));
+        assertEquals(expected, mathDomain.getPrimesBelowInputNumber(9));
     }
 
 

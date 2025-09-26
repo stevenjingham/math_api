@@ -1,4 +1,4 @@
-package com.example.math_api.Exception;
+package com.example.math_api.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

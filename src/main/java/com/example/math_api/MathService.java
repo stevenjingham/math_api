@@ -1,6 +1,6 @@
 package com.example.math_api;
 
-import com.example.math_api.Exception.InvalidNumberInput;
+import com.example.math_api.exception.InvalidNumberInput;
 
 public class MathService {
     private MathDomain mathDomain;
@@ -10,8 +10,13 @@ public class MathService {
     }
 
 
-    public String checkPrime(int number) {
+    public MathDTO checkPrime(int number) {
         if (number < 1) throw new InvalidNumberInput(number);
-        return number + " is a prime: " + mathDomain.checkPrime(number);
+        return new MathDTO(number, mathDomain.checkPrime(number));
+    }
+
+    public MathDTO getPrimesBelowInputNumber(int number) {
+        if (number < 1) throw new InvalidNumberInput(number);
+        return new MathDTO(number, mathDomain.checkPrime(number), mathDomain.getPrimesBelowInputNumber(number));
     }
 }
